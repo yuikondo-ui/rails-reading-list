@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="navbar">
+    <h1 class="my-5">Book List 📚</h1>
+    <button type="button" class="btn btn-primary">
+    <%= link_to "Add a new book", new_book_path %>
+    </button>
+  </div>
+  <div class="row">
+    <% @books.each do |book| %>
+      <div class="cards col-6 col-lg-4">
+        <%= link_to book_path(book) do %>
+          <div class="card shadow p-3 mb-3">
+            <h3 class="mb-3"><%= book.title %></h3>
+            <p><%= book.overview %></p>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
+</div>

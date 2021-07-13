@@ -1,10 +1,11 @@
-class CreateMovies < ActiveRecord::Migration[6.0]
+class CreateBooks < ActiveRecord::Migration[6.0]
   def change
-    create_table :movies do |t|
+    create_table :books do |t|
       t.string :title
       t.text :overview
-      t.string :poster_url
+      t.string :book_url
       t.integer :rating
+
       t.timestamps
     end
   end

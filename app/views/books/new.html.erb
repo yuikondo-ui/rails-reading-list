@@ -1,0 +1,9 @@
+<div class="container m-3">
+  <%= simple_form_for(@book) do |f| %>
+    <%= f.input :title %>
+    <%= f.input :overview %>
+    <%= f.input :book_url %>
+    <%= f.input :rating %>
+    <%= f.submit class: "btn btn-success mt-3" %>
+  <% end %>
+</div>
